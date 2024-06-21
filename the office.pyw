@@ -29,6 +29,23 @@ def play_media_folder(vlc_path, media_folder_path):
         # Send the "f" keystroke to enter full screen
         pyautogui.press('f')
         print("Toggled full screen mode in VLC")
+
+        # Send the "ctrl + h" keystroke to hide controls
+        pyautogui.hotkey('ctrl', 'h')
+        print("Toggled hiding controls in VLC")
+
+        # Send the "r" keystroke to turn on random
+        pyautogui.press('r')
+        print("Turned on random mode in VLC")
+
+        # Send the "n" keystroke 5 times with 0 second delay
+        for _ in range(5):
+            pyautogui.press('n')
+        print("Played the next episode 5 times in VLC")
+
+        # Send the "s" keystroke to turn on subtitles
+        pyautogui.press('s')
+        print("Turned on subtitles in VLC")
     except Exception as e:
         print(f"An error occurred: {e}")
 
