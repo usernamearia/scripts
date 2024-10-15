@@ -45,4 +45,7 @@ pyautogui.press('tab')  # Press tab to move to the password field
 pyautogui.write(password)
 pyautogui.press('enter')  # Press Enter to submit
 
+time.sleep(5)
+pyautogui.press('space')
+
 print("Automation completed.")
